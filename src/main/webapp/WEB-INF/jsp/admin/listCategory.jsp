@@ -7,7 +7,6 @@
 
 <script>
     $(function () {
-
         $("#addForm").submit(function () {
             if (!checkEmpty("name", "分类名称"))
                 return false;
@@ -65,6 +64,7 @@
         <%@include file="../include/admin/adminPage.jsp" %>
     </div>
 
+    <%--    上传图片--%>
     <div class="panel panel-warning addDiv">
         <div class="panel-heading">新增分类</div>
         <div class="panel-body">

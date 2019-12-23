@@ -5,7 +5,13 @@ import com.how2java.tmall.utils.Page;
 
 import java.util.List;
 
+/**
+ * @author Allen
+ */
 public interface CategoryService {
     List<Category> list(Page page);
+
     int total();
+
+    void add(Category category);
 }

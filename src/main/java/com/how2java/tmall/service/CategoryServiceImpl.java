@@ -8,7 +8,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("categoryService")
+/**
+ * @author Allen
+ */
+@Service
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
@@ -22,5 +25,10 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public int total() {
         return categoryMapper.total();
+    }
+
+    @Override
+    public void add(Category category) {
+        categoryMapper.add(category);
     }
 }

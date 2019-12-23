@@ -6,8 +6,14 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * @author Allen
+ */
 @Repository
 public interface CategoryMapper {
     List<Category> list(Page page);
+
     int total();
+
+    void add(Category category);
 }
