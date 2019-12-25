@@ -52,8 +52,7 @@
                     </td>
                     <td><a href="admin_category_edit?id=${c.id}"><span class="glyphicon glyphicon-edit"></span></a></td>
                     <td><a deleteLink="true" href="admin_category_delete?id=${c.id}"><span
-                            class="   glyphicon glyphicon-trash"></span></a></td>
-
+                            class="glyphicon glyphicon-trash"></span></a></td>
                 </tr>
             </c:forEach>
             </tbody>
@@ -68,6 +67,17 @@
     <div class="panel panel-warning addDiv">
         <div class="panel-heading">新增分类</div>
         <div class="panel-body">
+            <%--
+                1、multipart/form-data以二进制流的方式来处理表单数据，
+                这种编码方式会把文件域指定文件的内容也封装到请求参数中，
+                不会对字符编码
+
+                2、注意还需要在mvc.xml中配置
+                class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+                才能实现图片上传
+
+                3、提交方式必须为post
+            --%>
             <form method="post" id="addForm" action="admin_category_add" enctype="multipart/form-data">
                 <table class="addTable">
                     <tr>

@@ -25,7 +25,7 @@
     <!--防止静态资源被拦截-->
     <mvc:default-servlet-handler/>
 
-    <!--    自动装配适配器处理器和映射器处理器-->
+    <!--    自动装配适配器处理器和映射器处理器（由于是通过注解的方式，所以注意为Controller添加注解）-->
     <mvc:annotation-driven/>
 
 
@@ -36,6 +36,12 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!-- 对上传文件的解析-->
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+    <!--
+        1、对上传文件的解析
+        2、该bean的id必须为 multipartResolver
+    -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8"/>
+    </bean>
+
 </beans>

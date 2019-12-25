@@ -3,6 +3,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Objects;
+
 public class TestFun {
     @Test
     public void getTotal() {
@@ -14,6 +16,12 @@ public class TestFun {
 
     @Test
     public void springBean() {
-
+        String str =null;
+        if(Objects.isNull(str)){
+            if(true) {
+                str = "123";
+            }
+        }
+        System.out.println(str);
     }
 }

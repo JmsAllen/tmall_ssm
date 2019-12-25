@@ -16,9 +16,6 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-/**
- * @author Allen
- */
 @SuppressWarnings(value = "all")
 public class ImageUtil {
 
