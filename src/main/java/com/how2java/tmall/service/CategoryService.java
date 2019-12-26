@@ -8,16 +8,14 @@ import java.util.List;
 /**
  * @author Allen
  */
-public interface CategoryService {
-    List<Category> list(Page page);
-
-    int total();
+public interface CategoryService{
+    List<Category> list();
 
     void add(Category category);
 
     void delete(int id);
 
-    void update(Category category);
-
     Category get(int id);
+
+    void update(Category category);
 }
