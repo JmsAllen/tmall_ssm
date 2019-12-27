@@ -1,23 +1,21 @@
 package com.how2java.tmall.mapper;
 
 import com.how2java.tmall.pojo.Category;
-import com.how2java.tmall.utils.Page;
-import org.springframework.stereotype.Repository;
-
+import com.how2java.tmall.pojo.CategoryExample;
 import java.util.List;
 
-/**
- * @author Allen
- */
-@Repository
 public interface CategoryMapper {
-    List<Category> list();
+    int deleteByPrimaryKey(Integer id);
 
-    void add(Category category);
+    int insert(Category record);
 
-    void delete(int id);
+    int insertSelective(Category record);
 
-    void update(Category category);
+    List<Category> selectByExample(CategoryExample example);
 
-    Category get(int id);
+    Category selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(Category record);
+
+    int updateByPrimaryKey(Category record);
 }

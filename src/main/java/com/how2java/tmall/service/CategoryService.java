@@ -1,7 +1,6 @@
 package com.how2java.tmall.service;
 
 import com.how2java.tmall.pojo.Category;
-import com.how2java.tmall.utils.Page;
 
 import java.util.List;
 
