@@ -1,6 +1,7 @@
 package com.how2java.tmall.pojo;
 
 import java.util.Date;
+import java.util.List;
 
 public class Product {
     private Integer id;
@@ -9,15 +10,26 @@ public class Product {
 
     private String subTitle;
 
-    private Integer originalPrice;
+    private Float originalPrice;
 
-    private Integer promotePrice;
+    private Float promotePrice;
 
     private Integer stock;
 
     private Integer cid;
 
     private Date createDate;
+
+    /*非数据库字段*/
+    private Category  category;
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
     public Integer getId() {
         return id;
@@ -43,19 +55,19 @@ public class Product {
         this.subTitle = subTitle == null ? null : subTitle.trim();
     }
 
-    public Integer getOriginalPrice() {
+    public Float getOriginalPrice() {
         return originalPrice;
     }
 
-    public void setOriginalPrice(Integer originalPrice) {
+    public void setOriginalPrice(Float originalPrice) {
         this.originalPrice = originalPrice;
     }
 
-    public Integer getPromotePrice() {
+    public Float getPromotePrice() {
         return promotePrice;
     }
 
-    public void setPromotePrice(Integer promotePrice) {
+    public void setPromotePrice(Float promotePrice) {
         this.promotePrice = promotePrice;
     }
 
@@ -82,4 +94,5 @@ public class Product {
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
+
 }
