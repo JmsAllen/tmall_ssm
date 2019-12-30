@@ -1,14 +1,5 @@
-import com.how2java.tmall.mapper.ProductMapper;
-import com.how2java.tmall.pojo.Product;
-import com.how2java.tmall.pojo.ProductExample;
-import com.how2java.tmall.service.CategoryService;
-import com.how2java.tmall.service.ProductService;
-import com.how2java.tmall.service.impl.ProductServiceImpl;
 import org.junit.Test;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.List;
 import java.util.Objects;
 
 public class TestFun {

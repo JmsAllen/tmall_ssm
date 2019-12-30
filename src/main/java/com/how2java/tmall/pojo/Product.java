@@ -1,7 +1,6 @@
 package com.how2java.tmall.pojo;
 
 import java.util.Date;
-import java.util.List;
 
 public class Product {
     private Integer id;
@@ -21,7 +20,17 @@ public class Product {
     private Date createDate;
 
     /*非数据库字段*/
-    private Category  category;
+    private Category category;
+
+    private ProductImage firstProductImage;
+
+    public ProductImage getFirstProductImage() {
+        return firstProductImage;
+    }
+
+    public void setFirstProductImage(ProductImage firstProductImage) {
+        this.firstProductImage = firstProductImage;
+    }
 
     public Category getCategory() {
         return category;

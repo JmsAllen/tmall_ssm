@@ -10,8 +10,8 @@
         $("#addForm").submit(function() {
             if (!checkEmpty("name", "产品名称"))
                 return false;
-// 			if (!checkEmpty("subTitle", "小标题"))
-// 				return false;
+//          if (!checkEmpty("subTitle", "小标题"))
+//              return false;
             if (!checkNumber("originalPrice", "原价格"))
                 return false;
             if (!checkNumber("promotePrice", "优惠价格"))
@@ -25,7 +25,6 @@
 
 <title>产品管理</title>
 
-
 <div class="workingArea">
 
     <ol class="breadcrumb">
@@ -33,8 +32,6 @@
         <li><a href="admin_product_list?cid=${c.id}">${c.name}</a></li>
         <li class="active">产品管理</li>
     </ol>
-
-
 
     <div class="listDataTableDiv">
         <table
@@ -60,9 +57,9 @@
                     <td>${p.id}</td>
                     <td>
 
-                            <%--<c:if test="${!empty p.firstProductImage}">--%>
-                            <%--<img width="40px" src="img/productSingle/${p.firstProductImage.id}.jpg">--%>
-                            <%--</c:if>--%>
+                        <c:if test="${!empty p.firstProductImage}">
+                            <img width="40px" src="img/productSingle/${p.firstProductImage.id}.jpg">
+                        </c:if>
 
                     </td>
                     <td>${p.name}</td>
@@ -79,7 +76,7 @@
                             class="glyphicon glyphicon-edit"></span></a></td>
                     <td><a deleteLink="true"
                            href="admin_product_delete?id=${p.id}"><span
-                            class=" 	glyphicon glyphicon-trash"></span></a></td>
+                            class="     glyphicon glyphicon-trash"></span></a></td>
 
                 </tr>
             </c:forEach>
